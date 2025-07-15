@@ -2,7 +2,6 @@
 
 ## Project overview
 This project, developed for the Raven Scholarship and Internship Program, implements a trading algorithm designed to maximize profitability in financial markets. Built using Python, PyTorch, and Pandas, the algorithm leverages mathematical modeling, including differential equations and applied statistics, to analyze market data and optimize trading decisions. The solution focuses on generating consistent returns by identifying and capitalizing on market opportunities. This project demonstrates my ability to combine computational techniques and mathematical rigor to create effective, data-driven trading strategies.
-# Sctructure
 # 01. Premise & research
 This project, outlined in the Jupyter notebook `01.Premise & research.ipynb`, aims to develop and evaluate trading strategies to generate consistent profits using Binance top-of-book data (best bid and ask prices). The notebook serves as the foundational research and planning phase, where we define the problem, explore trading strategies, and establish a rigorous methodology based on the scientific method.
 
