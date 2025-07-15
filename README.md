@@ -1,16 +1,16 @@
-# Raven_internship_task_2025
+# Raven Internship Task 2025
 
 ## Project overview
-This project, developed for the Raven Scholarship and Internship Program, implements a trading algorithm designed to maximize profitability in financial markets. Built using Python, PyTorch, and Pandas, the algorithm leverages mathematical modeling, including differential equations and applied statistics, to analyze market data and optimize trading decisions. The solution focuses on generating consistent returns by identifying and capitalizing on market opportunities. This project demonstrates my ability to combine computational techniques and mathematical rigor to create effective, data-driven trading strategies.
+This project, developed for the Raven Scholarship and Internship Program, implements a trading algorithm designed to maximize profitability in financial markets. Built using Python, PyTorch, and Pandas, the algorithm leverages mathematical modeling, including differential equations and applied statistics, to analyze market data and optimize trading decisions. This project demonstrates my ability to combine computational techniques and mathematical rigor to create effective, data-driven trading strategies.
 # 01. Premise & research
-This project, outlined in the Jupyter notebook `01.Premise & research.ipynb`, aims to develop and evaluate trading strategies to generate consistent profits using Binance top-of-book data (best bid and ask prices). The notebook serves as the foundational research and planning phase, where we define the problem, explore trading strategies, and establish a rigorous methodology based on the scientific method.
+The first part of the project, outlined in the Jupyter notebook `01.Premise & research.ipynb`, aims to develop and evaluate trading strategies to generate consistent profits using Binance top-of-book data (best bid and ask prices). The notebook serves as the foundational research and planning phase, where we define the problem, explore trading strategies, and establish a rigorous methodology based on the scientific method.
 
 ## Key components
 - **Purpose**: Analyze trading strategies (mean reversion, momentum, market making) to identify profitable approaches using Binance top-of-book data.
 - **Methodology**: Uses the scientific method:
   - **Question**: Can we profit using top-of-book data?
   - **Research**: Study strategies, indicators (e.g., RSI, MACD, Bollinger Bands), and concepts like volatility and risk management.
-  - **Hypothesis**: Test a mean reversion strategy (buy below short-term moving average, sell above) and consider alternatives like momentum.
+  - **Hypothesis**: Test a momentum strategy and consider alternatives like mean reversion.
   - **Plan**: Implement strategies, backtest with historical data, and evaluate metrics (e.g., return, Sharpe ratio, drawdown).
 - **Key Concepts**:
   - **Top-of-Book Data**: Best bid/ask prices for deciding buy/sell actions.
@@ -22,7 +22,7 @@ This project, outlined in the Jupyter notebook `01.Premise & research.ipynb`, ai
 
 ## Next Steps
 - Collect Binance top-of-book data.
-- Code and backtest strategies (e.g., mean reversion with SMA).
+- Code and backtest strategies (momentum with SMA).
 - Analyze performance and refine strategies iteratively.
 
 ## Resources
@@ -35,8 +35,7 @@ This Jupyter notebook (`02.Momentum strategy.ipynb`) builds on `01.Premise & res
 ## Key Components
 - **Strategy**: Combines momentum (buy on strong upward trends, sell on downward trends) with SMA crossover signals (buy when fast SMA crosses above slow SMA, sell when below). Adjusts position sizes using ATR (volatility) and momentum/volume conviction.
 - **Implementation**:
-  - `MomentumStrategy` class in Backtrader calculates momentum:  
-    $$\text{Momentum}_t = \frac{P_t}{P_{t-L}} - 1$$
+  - `MomentumStrategy` class in Backtrader calculates momentum
   - Parameters: lookback (20 days), threshold (0.01), trade_size (0.1).
 - **Data**:
   - Binance: 1-hour BTCUSDT kline data.
@@ -52,18 +51,13 @@ This Jupyter notebook (`02.Momentum strategy.ipynb`) builds on `01.Premise & res
   - Add take-profit logic and indicators (RSI, MACD, Bollinger Bands).
   - Use Sortino/Calmar ratios, walk-forward optimization, and early stopping in grid search.
 
-## Next Steps
-- Enhance strategy with take-profit and additional indicators.
-- Improve optimization with Random Search/Bayesian methods.
-- Expand visualization and test on more assets/time frames.
-
 ## Resources
 - Medium: Momentum Strategy Optimization
 - Investopedia: Stop-Loss Orders
 - Articles on lot sizing and SMA-momentum relationships
 
 # 03. Mean reversion strategy
-This Jupyter notebook (`03.Mean reversion strategy.ipynb`) develops a mean reversion trading strategy inspired by physics-based models, specifically the harmonic oscillator. Unlike the momentum strategy, it uses stochastic differential equations (SDEs) to model price movements, focusing on the Ornstein-Uhlenbeck (OU) process for mean-reverting behavior.
+This Jupyter notebook (`03.Mean reversion strategy.ipynb`) develops a mean reversion trading strategy inspired by physics-based models, specifically the harmonic oscillator. Unlike the momentum strategy, it uses stochastic differential equations (SDEs) to model price movements, focusing on the Ornstein-Uhlenbeck (OU) process for mean-reverting behavior. **The main idea in this approach is to showcase my knowledge of basic mathematical concepts applied in qunatative trading and also avoid repetition of methods.
 
 ## Key Components
 - **Strategy**: Models prices as a damped harmonic oscillator, reverting to a mean value, using the OU process:
@@ -91,10 +85,6 @@ This Jupyter notebook (`03.Mean reversion strategy.ipynb`) develops a mean rever
   - Incorporate additional stochastic models or indicators for robustness.
   - Explore walk-forward optimization and alternative SDEs.
 
-## Next Steps
-- Refine model parameters to capture oscillations.
-- Test on diverse assets and time frames.
-- Integrate additional financial indicators for hybrid strategies.
 
 ## Resources
 - QuantStart: OU Simulation
@@ -149,7 +139,7 @@ This Jupyter notebook (`04.AI in trading.ipynb`) explores the application of art
 - Historical data may lack sufficient predictive signal or contain biases.
 - LSTM struggles to capture weak, unstable patterns in financial time series.
 
-## Suggested Improvements
+## Improvements
 - **Feature Engineering**: Incorporate external data (e.g., sentiment from news or X posts, macroeconomic indicators).
 - **Model Enhancements**: Explore ensemble methods, transformers, or reinforcement learning.
 - **Data Quality**: Use higher-frequency data (e.g., intraday) or alternative assets.
@@ -160,3 +150,7 @@ This Jupyter notebook (`04.AI in trading.ipynb`) explores the application of art
 - QuantStart: Machine Learning for Trading
 - ScienceDirect: Deep Learning in Financial Markets
 - PyTorch Documentation: LSTM and Time Series
+# Raven Internship Task 2025 - Conclusion
+
+## Project Summary
+In light of the above, I was able to practice all my knowledge and gaim more insight into the world of quantative finance. Despite difficulties, I was able to recreate a popular trading strategy, explain the mathematics behind some other strategies and also show how AI could be included in the development of such algorithms as well as the challanges coming with the noisy data and the compexity of the market.
